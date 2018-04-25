@@ -14,7 +14,7 @@ app.listen(port);
 app.post('/upload', upload.single('myFile'), function (req, res, next) {
     const path = './public/uploads';
     fs.readdir(path, function(err, items) {
-        let html = "";
+        let html = '<a href="http://localhost:3000"> Go Back Home';
         for(let i=0; i < items.length; i++){
             html += `<img src="${"./uploads/" + items[i]}">`;
         }
@@ -23,5 +23,5 @@ app.post('/upload', upload.single('myFile'), function (req, res, next) {
     });
     // req.file is the `myFile` file
     // req.body will hold the text fields, if there were any
-  })
+  });
 
