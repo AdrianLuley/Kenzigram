@@ -1,0 +1,15 @@
+
+html
+    head
+        title="Kenziegram"
+    body
+        form(action="/upload" method="post" enctype="multipart/form-data")
+            fieldset(name="Upload Picture")
+                div
+                    input(type="file" name="myFile" accept="image/")
+                    input(type="submit")
+                div
+                    input(type="reset" value="Reset the form")
+
+        for i in images
+            img(src=`/uploads/${i}`)
