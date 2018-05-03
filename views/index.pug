@@ -11,5 +11,8 @@ html
                 div
                     input(type="reset" value="Reset the form")
 
-        for i in images
-            img(src=`/uploads/${i}`)
+        div(id="image-container")
+            for i in images
+                img(src=`/uploads/${i}`)
+
+        script(src="client.js")
